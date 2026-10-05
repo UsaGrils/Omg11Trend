@@ -4,8 +4,34 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#09000f">
-  <meta name="description" content="Photo gallery">
+  <meta name="description" content="Trending videos">
   <title>Viral Vidio Today</title>
+
+  <!-- HISTATS -->
+  <script type="text/javascript">
+    var _Hasync = _Hasync || [];
+
+    _Hasync.push([
+      'Histats.start',
+      '1,5044824,4,9,110,60,00011111'
+    ]);
+
+    _Hasync.push(['Histats.fasi', '1']);
+    _Hasync.push(['Histats.track_hits', '']);
+
+    (function () {
+      var hs = document.createElement('script');
+      hs.type = 'text/javascript';
+      hs.async = true;
+      hs.src = '//s10.histats.com/js15_as.js';
+
+      (
+        document.getElementsByTagName('head')[0] ||
+        document.getElementsByTagName('body')[0]
+      ).appendChild(hs);
+    })();
+  </script>
+  <!-- END HISTATS -->
 
   <style>
     :root{
@@ -20,7 +46,11 @@
       --shadow:0 0 28px rgba(139,53,255,.18);
     }
 
-    *{box-sizing:border-box;margin:0;padding:0}
+    *{
+      box-sizing:border-box;
+      margin:0;
+      padding:0;
+    }
 
     body{
       min-height:100vh;
@@ -65,7 +95,11 @@
     .photo-card{
       position:relative;
       overflow:hidden;
-      background:linear-gradient(145deg,rgba(27,8,39,.96),rgba(10,2,17,.98));
+      background:linear-gradient(
+        145deg,
+        rgba(27,8,39,.96),
+        rgba(10,2,17,.98)
+      );
       border:1px solid var(--border);
       border-radius:18px;
       box-shadow:var(--shadow);
@@ -85,7 +119,9 @@
       height:100%;
       display:block;
       object-fit:cover;
-      transition:transform .45s ease,filter .45s ease;
+      transition:
+        transform .45s ease,
+        filter .45s ease;
     }
 
     .photo-card:hover .photo-box img{
@@ -97,7 +133,11 @@
       position:absolute;
       inset:auto 0 0;
       height:42%;
-      background:linear-gradient(to top,rgba(4,0,8,.92),transparent);
+      background:linear-gradient(
+        to top,
+        rgba(4,0,8,.92),
+        transparent
+      );
       pointer-events:none;
     }
 
@@ -137,7 +177,10 @@
       font-weight:900;
       letter-spacing:.8px;
       text-transform:uppercase;
-      transition:transform .2s ease,box-shadow .2s ease,filter .2s ease;
+      transition:
+        transform .2s ease,
+        box-shadow .2s ease,
+        filter .2s ease;
       cursor:pointer;
     }
 
@@ -148,14 +191,12 @@
 
     .btn-primary{
       color:#fff;
-      background:linear-gradient(100deg,var(--purple),var(--pink));
+      background:linear-gradient(
+        100deg,
+        var(--purple),
+        var(--pink)
+      );
       box-shadow:0 8px 25px rgba(255,43,191,.24);
-    }
-
-    .btn-secondary{
-      color:#fff;
-      background:rgba(255,255,255,.055);
-      border:1px solid rgba(255,255,255,.12);
     }
 
     .smartlink-wrap{
@@ -172,7 +213,11 @@
       text-decoration:none;
       font-size:12px;
       font-weight:800;
-      background:linear-gradient(90deg,#641dce,#ff1daf);
+      background:linear-gradient(
+        90deg,
+        #641dce,
+        #ff1daf
+      );
       box-shadow:0 0 22px rgba(139,53,255,.18);
     }
 
@@ -205,7 +250,11 @@
       bottom:2px;
       width:3px;
       border-radius:4px;
-      background:linear-gradient(180deg,var(--pink),var(--purple));
+      background:linear-gradient(
+        180deg,
+        var(--pink),
+        var(--purple)
+      );
       box-shadow:0 0 10px rgba(255,43,191,.65);
     }
 
@@ -216,6 +265,13 @@
       border-radius:9px;
     }
 
+    /* HISTATS COUNTER */
+    #histats_counter{
+      text-align:center;
+      margin-top:18px;
+      min-height:1px;
+    }
+
     .footer{
       text-align:center;
       color:#75667f;
@@ -224,127 +280,126 @@
     }
 
     @media(max-width:360px){
-      body{padding-left:9px;padding-right:9px}
-      .brand{font-size:24px}
-      .photo-title{font-size:17px}
+      body{
+        padding-left:9px;
+        padding-right:9px;
+      }
+
+      .brand{
+        font-size:24px;
+      }
+
+      .photo-title{
+        font-size:17px;
+      }
     }
   </style>
 </head>
 
 <body>
-  <script>
-    /*
-      ==========================================
-      ACEIMG PHOTO URL
-      ==========================================
-      Paste your Aceimg CDN image URL below.
-      Example:
-      const ACEIMG_PHOTO = "https://.../your-image.jpg";
-    */
-    const ACEIMG_PHOTO = "https://aceimg.com/PASTE-YOUR-IMAGE-URL-HERE";
 
-    document.addEventListener("DOMContentLoaded", function () {
-      const photo = document.getElementById("mainPhoto");
-
-      if (photo && ACEIMG_PHOTO && !ACEIMG_PHOTO.includes("PASTE-YOUR-IMAGE-URL-HERE")) {
-        photo.src = ACEIMG_PHOTO;
-      }
-    });
-  </script>
   <main class="page">
 
     <header class="header">
       <div class="brand">Viral Video Today</div>
-      <div class="subtitle">💦👇Watch Noww Vidio 👇💦</div>
+      <div class="subtitle">💦👇 Watch Now Video 👇💦</div>
     </header>
 
     <section class="photo-card">
 
       <!-- PHOTO FROM ACEIMG CDN -->
       <div class="photo-box">
-        <img id="mainPhoto" src="https://aceimg.com/G4QGgFede.jpg" alt="Trending Video">
+        <img
+          id="mainPhoto"
+          src="https://aceimg.com/G4QGgFede.jpg"
+          alt="Trending Video"
+        >
         <div class="photo-glow"></div>
       </div>
 
       <div class="photo-info">
-        <h1 class="photo-title">Trending Vidio</h1>
+
+        <h1 class="photo-title">
+          Trending Video
+        </h1>
+
         <p class="photo-desc">
-          Discover the latest trending videos. Click WATCH to continue.
+          Discover the latest trending videos.
+          Click WATCH to continue.
         </p>
 
         <div class="actions">
-          <!-- LINK WATCH -->
+
+          <!-- WATCH LINK -->
           <a
             class="btn btn-primary"
             href="https://omg10.com/4/11462883"
             target="_blank"
             rel="noopener noreferrer"
-          >▶ WATCH</a>
+          >
+            ▶ WATCH
+          </a>
+
         </div>
 
+        <!-- OPEN NOW -->
         <div class="smartlink-wrap">
           <a
             class="smartlink-btn"
             href="https://x-hubb.github.io/Badiesgirlhub/"
             target="_blank"
             rel="noopener noreferrer"
-          >OPEN NOW</a>
+          >
+            OPEN NOW
+          </a>
         </div>
 
         <!-- NATIVE BANNER -->
         <div class="native-banner">
-          <div class="native-title">Trending Vidio</div>
-          <div class="native-ad">
-            <script data-cfasync="false" async type="text/javascript" src="//qw.rolledipocras.com/tiTtAiKEeLuZ/151239"></script>
+
+          <div class="native-title">
+            Trending Video
           </div>
+
+          <div class="native-ad">
+
+            <script
+              data-cfasync="false"
+              async
+              type="text/javascript"
+              src="//qw.rolledipocras.com/tiTtAiKEeLuZ/151239">
+            </script>
+
+          </div>
+
         </div>
+
       </div>
 
     </section>
 
-    <div class="footer">© 2026 Trending Vidio</div>
-  </main>
-  
-<body>
-  <!-- HISTATS COUNTER -->
-  <div id="histats_counter"></div>
+    <!-- HISTATS COUNTER -->
+    <div id="histats_counter"></div>
 
-  <!-- Histats.com START (async) -->
-  <script type="text/javascript">
-    var _Hasync = _Hasync || [];
-
-    _Hasync.push([
-      'Histats.start',
-      '1,5044824,4,9,110,60,00011111'
-    ]);
-
-    _Hasync.push(['Histats.fasi', '1']);
-    _Hasync.push(['Histats.track_hits', '']);
-
-    (function () {
-      var hs = document.createElement('script');
-      hs.type = 'text/javascript';
-      hs.async = true;
-      hs.src = '//s10.histats.com/js15_as.js';
-
-      (
-        document.getElementsByTagName('head')[0] ||
-        document.getElementsByTagName('body')[0]
-      ).appendChild(hs);
-    })();
-  </script>
-
-  <noscript>
-    <a href="/" target="_blank" rel="noopener noreferrer">
-      <img
-        src="//sstatic1.histats.com/0.gif?5044824&101"
-        alt=""
-        border="0"
+    <noscript>
+      <a
+        href="/"
+        target="_blank"
+        rel="noopener noreferrer"
       >
-    </a>
-  </noscript>
-  <!-- Histats.com END -->
+        <img
+          src="//sstatic1.histats.com/0.gif?5044824&101"
+          alt=""
+          border="0"
+        >
+      </a>
+    </noscript>
 
-  <!-- LANJUTKAN KODE WEBSITE KAMU DI SINI -->
+    <div class="footer">
+      © 2026 Trending Video
+    </div>
+
+  </main>
+
 </body>
 </html>
