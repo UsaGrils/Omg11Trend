@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#09000f">
+  <meta name="description" content="Trending videos">
+  <title>Viral Vidio Today</title>
+
+  <!-- HISTATS -->
+  <script type="text/javascript">
+    var _Hasync = _Hasync || [];
+
+    _Hasync.push([
+      'Histats.start',
+      '1,5044824,4,9,110,60,00011111'
+    ]);
+
+    _Hasync.push(['Histats.fasi', '1']);
+    _Hasync.push(['Histats.track_hits', '']);
+
+    (function () {
+      var hs = document.createElement('script');
+      hs.type = 'text/javascript';
+      hs.async = true;
+      hs.src = '//s10.histats.com/js15_as.js';
+
+      (
+        document.getElementsByTagName('head')[0] ||
+        document.getElementsByTagName('body')[0]
+      ).appendChild(hs);
+    })();
+  </script>
+  <!-- END HISTATS -->
+
+  <style>
+    :root{
+      --bg:#07000d;
+      --card:#12051b;
+      --card2:#1b0827;
+      --pink:#ff2bbf;
+      --purple:#8b35ff;
+      --text:#fff;
+      --muted:#b9a9c5;
+      --border:rgba(255,43,191,.28);
+      --shadow:0 0 28px rgba(139,53,255,.18);
+    }
+
+    *{
+      box-sizing:border-box;
+      margin:0;
+      padding:0;
+    }
+
+    body{
+      min-height:100vh;
+      background:
+        radial-gradient(circle at 50% 0%, rgba(139,53,255,.22), transparent 38%),
+        radial-gradient(circle at 100% 70%, rgba(255,43,191,.10), transparent 30%),
+        var(--bg);
+      color:var(--text);
+      font-family:Arial,Helvetica,sans-serif;
+      padding:20px 12px 40px;
+    }
+
+    .page{
+      width:100%;
+      max-width:480px;
+      margin:0 auto;
+    }
+
+    .header{
+      text-align:center;
+      padding:8px 0 18px;
+    }
+
+    .brand{
+      font-size:28px;
+      font-weight:900;
+      letter-spacing:2px;
+      text-transform:uppercase;
+      background:linear-gradient(90deg,#fff,var(--pink),#b66cff);
+      -webkit-background-clip:text;
+      background-clip:text;
+      color:transparent;
+      text-shadow:0 0 24px rgba(255,43,191,.25);
+    }
+
+    .subtitle{
+      color:var(--muted);
+      font-size:12px;
+      margin-top:6px;
+    }
+
+    .photo-card{
+      position:relative;
+      overflow:hidden;
+      background:linear-gradient(
+        145deg,
+        rgba(27,8,39,.96),
+        rgba(10,2,17,.98)
+      );
+      border:1px solid var(--border);
+      border-radius:18px;
+      box-shadow:var(--shadow);
+      padding:8px;
+    }
+
+    .photo-box{
+      position:relative;
+      overflow:hidden;
+      border-radius:13px;
+      background:#0b0610;
+      aspect-ratio:4/5;
+    }
+
+    .photo-box img{
+      width:100%;
+      height:100%;
+      display:block;
+      object-fit:cover;
+      transition:
+        transform .45s ease,
+        filter .45s ease;
+    }
+
+    .photo-card:hover .photo-box img{
+      transform:scale(1.035);
+      filter:brightness(1.06);
+    }
+
+    .photo-glow{
+      position:absolute;
+      inset:auto 0 0;
+      height:42%;
+      background:linear-gradient(
+        to top,
+        rgba(4,0,8,.92),
+        transparent
+      );
+      pointer-events:none;
+    }
+
+    .photo-info{
+      padding:14px 8px 8px;
+    }
+
+    .photo-title{
+      font-size:19px;
+      font-weight:800;
+      line-height:1.25;
+    }
+
+    .photo-desc{
+      color:var(--muted);
+      font-size:12px;
+      line-height:1.5;
+      margin-top:6px;
+    }
+
+    .actions{
+      display:grid;
+      grid-template-columns:1fr;
+      gap:10px;
+      margin-top:14px;
+    }
+
+    .btn{
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      min-height:48px;
+      padding:13px 18px;
+      border-radius:12px;
+      text-decoration:none;
+      font-size:13px;
+      font-weight:900;
+      letter-spacing:.8px;
+      text-transform:uppercase;
+      transition:
+        transform .2s ease,
+        box-shadow .2s ease,
+        filter .2s ease;
+      cursor:pointer;
+    }
+
+    .btn:hover{
+      transform:translateY(-2px);
+      filter:brightness(1.08);
+    }
+
+    .btn-primary{
+      color:#fff;
+      background:linear-gradient(
+        100deg,
+        var(--purple),
+        var(--pink)
+      );
+      box-shadow:0 8px 25px rgba(255,43,191,.24);
+    }
+
+    .smartlink-wrap{
+      margin-top:12px;
+    }
+
+    .smartlink-btn{
+      width:100%;
+      display:block;
+      text-align:center;
+      padding:13px;
+      border-radius:11px;
+      color:#fff;
+      text-decoration:none;
+      font-size:12px;
+      font-weight:800;
+      background:linear-gradient(
+        90deg,
+        #641dce,
+        #ff1daf
+      );
+      box-shadow:0 0 22px rgba(139,53,255,.18);
+    }
+
+    .native-banner{
+      margin-top:16px;
+      padding:12px;
+      border-radius:13px;
+      background:rgba(255,255,255,.035);
+      border:1px solid rgba(255,43,191,.20);
+      box-shadow:0 0 20px rgba(139,53,255,.10);
+    }
+
+    .native-title{
+      margin-bottom:10px;
+      color:#fff;
+      font-size:13px;
+      font-weight:900;
+      letter-spacing:.7px;
+      text-transform:uppercase;
+      text-align:left;
+      position:relative;
+      padding-left:11px;
+    }
+
+    .native-title::before{
+      content:"";
+      position:absolute;
+      left:0;
+      top:2px;
+      bottom:2px;
+      width:3px;
+      border-radius:4px;
+      background:linear-gradient(
+        180deg,
+        var(--pink),
+        var(--purple)
+      );
+      box-shadow:0 0 10px rgba(255,43,191,.65);
+    }
+
+    .native-ad{
+      width:100%;
+      min-height:50px;
+      overflow:hidden;
+      border-radius:9px;
+    }
+
+    /* HISTATS COUNTER */
+    #histats_counter{
+      text-align:center;
+      margin-top:18px;
+      min-height:1px;
+    }
+
+    .footer{
+      text-align:center;
+      color:#75667f;
+      font-size:10px;
+      margin-top:18px;
+    }
+
+    @media(max-width:360px){
+      body{
+        padding-left:9px;
+        padding-right:9px;
+      }
+
+      .brand{
+        font-size:24px;
+      }
+
+      .photo-title{
+        font-size:17px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <main class="page">
+
+    <header class="header">
+      <div class="brand">Viral Video Today</div>
+      <div class="subtitle">💦👇 Watch Now Video 👇💦</div>
+    </header>
+
+    <section class="photo-card">
+
+      <!-- PHOTO FROM ACEIMG CDN -->
+      <div class="photo-box">
+        <img
+          id="mainPhoto"
+          src="https://cdn.aceimg.com/5lGD84Ivn.jpg"
+          alt="Trending Video"
+        >
+        <div class="photo-glow"></div>
+      </div>
+
+      <div class="photo-info">
+
+        <h1 class="photo-title">
+          Trending Video
+        </h1>
+
+        <p class="photo-desc">
+          Discover the latest trending videos.
+          Click WATCH to continue.
+        </p>
+
+        <div class="actions">
+
+          <!-- WATCH LINK -->
+          <a
+            class="btn btn-primary"
+            href="https://omg10.com/4/11462883"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            ▶ WATCH
+          </a>
+
+        </div>
+
+        <!-- OPEN NOW -->
+        <div class="smartlink-wrap">
+          <a
+            class="smartlink-btn"
+            href="https://x-hubb.github.io/Badiesgirlhub/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            OPEN NOW
+          </a>
+        </div>
+
+        <!-- NATIVE BANNER -->
+        <div class="native-banner">
+
+          <div class="native-title">
+            Trending Video
+          </div>
+
+          <div class="native-ad">
+
+            <script
+              data-cfasync="false"
+              async
+              type="text/javascript"
+              src="//qw.rolledipocras.com/tiTtAiKEeLuZ/151239">
+            </script>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- HISTATS COUNTER -->
+    <div id="histats_counter"></div>
+
+    <noscript>
+      <a
+        href="/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <img
+          src="//sstatic1.histats.com/0.gif?5044824&101"
+          alt=""
+          border="0"
+        >
+      </a>
+    </noscript>
+
+    <div class="footer">
+      © 2026 Trending Video
+    </div>
+
+  </main>
+
+</body>
+</html>
